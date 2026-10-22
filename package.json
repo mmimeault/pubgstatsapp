@@ -1,0 +1,31 @@
+{
+  "name": "pubgstats",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "./scripts/dev.sh",
+    "dev:api": "npm run dev --workspace @pubgstats/api",
+    "dev:web": "npm run dev --workspace @pubgstats/web",
+    "dev:crawler": "npm run dev --workspace @pubgstats/crawler",
+    "crawl": "./scripts/crawl.sh",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "concurrently": "^10.0.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  },
+  "allowScripts": {
+    "better-sqlite3@13.0.3": true,
+    "esbuild@0.28.2": true,
+    "fsevents@2.3.3": true
+  }
+}

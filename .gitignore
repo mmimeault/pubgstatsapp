@@ -1,0 +1,12 @@
+node_modules/
+.tools/
+data/*.db
+data/*.db-*
+data/*.log
+data/*.pid
+dist/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
